@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/e42379d701.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form action="" id="form">
+        <div class="first-part">
+            <div class="left-col1 col left">
+                <label for="select-state1">Região pretendida</label>
+                <select required="true" name="" class="default-input" id="select-state1">
+                    <option value="" disabled selected>Selecione o Estado</option>
+                    <option value="ES">ES</option>
+                    <option value="MG">MG</option>
+                    <option value="RJ">RJ</option>
+                    <option value="SP">SP</option>
+                </select>
+                <input required="true" placeholder="Região" type="text" class="default-input" id="" />
+            </div>
+            <div class="right-col1 col right">
+                <label for="cidade">Endereço</label>
+                <input required="true" placeholder="Cidade" type="text" name="Cidade" class="default-input" id="cidade">
+                <select name="" class="default-input" id="select-state2">
+                    <option value="" selected disabled>Selecione o Estado</option>
+                    <option value="ES">ES</option>
+                    <option value="MG">MG</option>
+                    <option value="RJ">RJ</option>
+                    <option value="SP">SP</option>
+                </select>
+            </div>
+            <div class="left-col2 col left">
+                <label for="name">Dados pessoais</label>
+                <input required="true" placeholder="Nome Completo" type="text" name="Nome" class="default-input" id="name">
+                <div class="select-gender">
+                    <p>Sexo:</p>
+                    <div class="male">
+                        <input required="true" type="radio" name="Gênero" id="gender-1">
+                        <label for="gender-1">Masculino</label>
+                    </div>
+                    <div class="female">
+                        <input required="true"="true" type="radio" name="Gênero" id="gender-2">
+                        <label for="gender-2">Feminino</label>
+                    </div>
+                </div>
+            </div>
+            <div class="right-col2 col right">
+                <label for="cpf">Documentos</label>
+                <input onkeydown="javascript: fMasc( this, mCPF );" maxlength="14" required="true" placeholder="CPF" type="text" name="CPF" class="default-input" id="cpf">
+            </div>
+            <div class="left-col3 col left">
+                <label for="email">Dados para contato</label>
+                <input required="true" placeholder="E-mail" type="email" name="Email" class="default-input" id="email">
+                <input onkeyup="handlePhone(event)" maxlength="15" required="true" placeholder="Telefone" type="tel" name="telefone-fixo" class="default-input" id="cellphone">
+                <input onkeyup="handlePhone(event)" required="true" maxlength="15" placeholder="Celular" type="tel" name="celular" class="default-input" id="phone">
+            </div>
+        </div>
+        <div class="repres-comercial">
+            <h4>Representação comercial</h4>
+            <div class="repres-comercial-inner">
+                <label for="representacao-sim">Possui empresa de representação comercial?</label>
+                <input required="true" type="radio" name="Repres" id="representacao-sim">
+                <label>Sim</label>
+                <input required="true" type="radio" name="Repres" id="representacao-nao">
+                <label for="representacao-nao">Não</label>
+            </div>
+        </div>
+        <div class="repres-profissional">
+            <h4>Experiência profissional</h4>
+            <h3>(no mínimo uma, no máximo três)</h3>
+            <div class="test">
+                <div class="add-empresa">
+                    <label for="">Adicionar empresa:</label>
+                    <i class="fa fa-plus"></i>
+                </div>
+                <div class="anexo-curriculo">
+                    <label>Anexe seu currículo:</label>
+                    <input onchange='displayIcon()' required="true" type="file" name="inputfile" id="inputfile" name="Currículo"> 
+                    <img src="correct-icon.svg" class="correct-icon" alt="">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="qualification-resume">
+            <h4>Resumo das qualificações</h4>
+            <div class="qual-inner">
+                <p>Faça um resumo das suas principais qualificações.</p>
+                <p>Não deixe de preencher este campo, pois ele é muito utilizado nas pesquisas.</p>
+                <textarea required="true" name="textarea" id="textarea"></textarea>
+                <button class="submit-btn" type="submit">Enviar</button>
+            </div>
+        </div>
+
+    </form>
+
+</body>
+<script src="script.js" defer></script>
+</html>

@@ -1,0 +1,389 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* NORMAL CSS */
+
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding-block: 5em;
+}
+
+.default-input {
+  border: 1px solid #d0d0d0;
+  outline: 0 none;
+  background-color: #fff;
+  box-shadow: 0 0 5px 2px rgb(0 0 0 / 4%);
+  min-height: 32px;
+  font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+  width: 100%;
+  padding-inline: 8px;
+  border-radius: 4px 0 0 4px;
+}
+
+label {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: -.5em;
+  color: #403F3F;
+}
+
+#form {
+   width: min(90%, 700px);
+   box-shadow: 1px 1px 15px 1px rgb(0 0 0 / 10%);
+   padding: 35px;
+   display: flex;
+   flex-direction: column;
+   gap: 1em;
+}
+
+.first-part {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  border-bottom: solid 1px #e6e6e6;
+  padding-bottom: 2em;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.select-gender {
+    display: flex;
+    align-items: flex-end;
+}
+
+.select-gender label {
+  margin: 0;
+}
+
+input[type="radio"] {
+  margin-block: 0;
+}
+
+.select-gender p {
+    color: #403F3F;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.select-gender label {
+    color: #585757;
+    font-family: 'Poppins', arial, sans-serif;
+    font-weight: 400;
+}
+
+.male, .female {
+    display: flex;
+    align-items: center;
+}
+
+.a {
+    color: black;
+    z-index: 999;
+}
+
+.repres-comercial {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: .9em;
+  border-bottom: solid 1px #e6e6e6;
+  padding-bottom: 2em;
+  padding-top: 1em;
+}
+
+.repres-comercial-inner {
+  white-space: nowrap;
+}
+
+.repres-comercial h4{
+  font-weight: 400;
+  color: #403F3F;
+  font-weight: 700;
+}
+
+.repres-comercial label {
+  color: #585757;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Poppins', arial, sans-serif;
+}
+
+.repres-profissional {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2em;
+  padding-top: 1em;
+  border-bottom: solid 1px #e6e6e6;
+}
+
+.repres-profissional h4 {
+  color: #403F3F;
+  font-weight: 700;
+}
+
+.repres-profissional h3 {
+  font-weight: 400;
+  color: #585757;
+  font-size: 14px;
+  font-family: 'Poppins', arial, sans-serif;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+  gap: .5em;
+}
+
+.add-empresa {
+  display: flex;
+  align-items: center;
+  transition: .4s ease;
+  gap: .6em;
+}
+
+.add-empresa label {
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.fa-plus {
+  font-size: 15px;
+  margin-left: 7px;
+  cursor: pointer;
+  background: #f4f4f4;
+  border: solid 1px #e6e6e6;
+  border-radius: 3px;
+  padding: 3px 7px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.plus:before {
+  content: "\f067";
+}
+
+select {
+  color: gray;
+  padding-inline: .4em !important; 
+}
+
+.anexo-curriculo {
+  display: flex;
+  gap: .6em;
+}
+
+#inputfile {
+  max-width: 125px;
+}
+
+.correct-icon {
+  display: none;
+  width: 20px;
+  height: 20px;
+}
+
+#file-button {
+  font-family: 'Poppins', arial, sans-serif;
+  font-size: 13px;
+}
+
+.anexo-curriculo label {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+input[type=file]::file-selector-button {
+  font-size: .9rem;
+}
+
+.qualification-resume {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.qualification-resume h4 {
+  color: #403F3F;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.qual-inner {
+  color: #585757;
+  display: flex;
+  font-family: 'Poppins', arial, sans-serif;
+  flex-direction: column;
+}
+
+.qual-inner p {
+  margin: 0;
+  font-size: 12px;
+}
+
+#textarea {
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  margin-top: 11px;
+  margin-bottom: 2em;
+  border: 1px solid #d0d0d0;
+  min-height: 250px;
+  outline: none;
+  background: #fafafa;
+  transition: 0.4s;
+  color: black;
+  border-radius: 3px;
+  padding: 12px 18px;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.submit-btn {
+  border: none;
+  color: #f3f3f3;
+  font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+  width: fit-content;
+  cursor: pointer;
+  background-color: #304770;
+  margin: 0 auto;
+  border-radius: 4px;
+  padding: 12.8px 30.4px
+}
+
+.submit-btn:hover {
+ background-color: #1a81b1;
+ transition: .2s ease-in-out;
+}
+
+.companies-container {
+  display: flex;
+  gap: 1em;
+}
+
+@media only screen and (width<=768px) {
+  .first-part {
+    grid-template-columns: 1fr;
+  }
+
+  .left-col2 {
+    grid-row: 2 / 3;
+  }
+
+  .left-col3 {
+    grid-row: 3 / 4;
+  }
+
+  .repres-comercial-inner {
+    font-size: 15px;
+    white-space: unset;
+    text-align: center;
+  }
+
+  .repres-comercial-inner label {
+    font-size: 15px;
+  }
+
+  #textarea {
+    min-height: 120px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  .add-empresa label {
+    font-size: 13px;
+  }
+
+  .anexo-curriculo label {
+    font-size: 13px;
+  }
+
+  .companies-container {
+    flex-direction: column;
+  }
+
+}
