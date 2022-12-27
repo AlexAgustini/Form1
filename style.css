@@ -399,4 +399,8 @@ input[type=file]::file-selector-button {
   .companies-container {
     flex-direction: column;
   }
+  
+  .repres-comercial h4 {
+    text-align: center
+}
 }
