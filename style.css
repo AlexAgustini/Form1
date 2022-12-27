@@ -399,9 +399,4 @@ input[type=file]::file-selector-button {
   .companies-container {
     flex-direction: column;
   }
-  
-  html {
-    overflow: hidden
-  }
-
 }
