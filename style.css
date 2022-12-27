@@ -173,6 +173,19 @@ input[type="radio"] {
 
 .repres-comercial-inner {
   white-space: nowrap;
+  display: flex;
+  gap: .5em;
+}
+
+.radio-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .2em;
+}
+
+.radio-input-container label {
+  margin: 0;
 }
 
 .repres-comercial h4{
@@ -360,6 +373,8 @@ input[type=file]::file-selector-button {
     font-size: 15px;
     white-space: unset;
     text-align: center;
+    gap: 1em;
+    flex-direction: column;
   }
 
   .repres-comercial-inner label {
